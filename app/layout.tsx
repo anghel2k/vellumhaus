@@ -5,7 +5,7 @@ import "@fontsource/space-mono/700.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Vellumhaus",
+  title: "vellumhaus",
   description: "AI-hybrid post-production by Anghel Robert. Keyframes, retouch, compositing and final film.",
   icons: { icon: "/brand/vh_favicon.svg", shortcut: "/brand/vh_favicon.svg" },
 };
