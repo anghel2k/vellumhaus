@@ -290,7 +290,7 @@ export default function Home() {
           <p className="eyebrow">02 / Contact</p>
           <h2 id="contact-title">Bring the<br />next frame.</h2>
           <p className="contactLead">For films, campaigns and image systems that need craft at machine speed.</p>
-          <a className="contactEmail" href="mailto:hello@veliumin.com"><span>hello@veliumin.com</span><span aria-hidden="true">↗</span></a>
+          <a className="contactEmail" href="mailto:contact@vellumhaus.studio"><span>contact@vellumhaus.studio</span><span aria-hidden="true">↗</span></a>
           <div className="contactGrid">
             <div className="contactPerson"><span>Name / Role</span><strong>Anghel Robert</strong><small>Producer / Founder</small></div>
             <div><span>Based</span><strong>Bucharest, Romania</strong></div>
