@@ -54,16 +54,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="ticker" aria-hidden="true">
-          <div className="tickerTrack">
-            <span>HUMAN JUDGEMENT · MACHINE ASSISTANCE · DESIGNED KEYFRAMES · CONTROLLED FINISH · COMPOSITING · COLOUR · MOTION · FINAL IMAGE ·&nbsp;</span>
-            <span>HUMAN JUDGEMENT · MACHINE ASSISTANCE · DESIGNED KEYFRAMES · CONTROLLED FINISH · COMPOSITING · COLOUR · MOTION · FINAL IMAGE ·&nbsp;</span>
-            <span>HUMAN JUDGEMENT · MACHINE ASSISTANCE · DESIGNED KEYFRAMES · CONTROLLED FINISH · COMPOSITING · COLOUR · MOTION · FINAL IMAGE ·&nbsp;</span>
-            <span>HUMAN JUDGEMENT · MACHINE ASSISTANCE · DESIGNED KEYFRAMES · CONTROLLED FINISH · COMPOSITING · COLOUR · MOTION · FINAL IMAGE ·&nbsp;</span>
-            <span>HUMAN JUDGEMENT · MACHINE ASSISTANCE · DESIGNED KEYFRAMES · CONTROLLED FINISH · COMPOSITING · COLOUR · MOTION · FINAL IMAGE ·&nbsp;</span>
-            <span>HUMAN JUDGEMENT · MACHINE ASSISTANCE · DESIGNED KEYFRAMES · CONTROLLED FINISH · COMPOSITING · COLOUR · MOTION · FINAL IMAGE ·&nbsp;</span>
-          </div>
-        </div>
+        <div className="ticker" aria-hidden="true" />
 
         <section className="workSection" id="work" aria-labelledby="work-title">
           <article className="featuredProject" id="san-pellegrino">
@@ -257,3 +248,4 @@ export default function Home() {
     </>
   );
 }
+
