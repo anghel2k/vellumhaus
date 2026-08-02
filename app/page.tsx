@@ -20,6 +20,13 @@ const houseOfErrorsStills = [
   { id: "04", file: "ss25-04.jpg" },
 ];
 
+const gatorRunFilms = [
+  { id: "01", title: "Egg Hatch", file: "egg-hatch.mp4", poster: "egg-hatch.jpg" },
+  { id: "02", title: "Follow Leader", file: "follow-leader.mp4", poster: "follow-leader.jpg" },
+  { id: "03", title: "Croc Insert", file: "croc-insert.mp4", poster: "croc-insert.jpg" },
+  { id: "04", title: "Mama Croc", file: "mama-croc.mp4", poster: "mama-croc.jpg" },
+];
+
 export default function Home() {
   return (
     <>
@@ -170,7 +177,7 @@ export default function Home() {
           <article className="featuredProject heinekenProject" id="heineken" aria-labelledby="heineken-title">
             <header className="featureHeader heinekenHeader">
               <div className="projectIdentity">
-                <p className="eyebrow">Project 04 / Hybrid Production</p>
+                <p className="eyebrow">Fans Have More Friends / Hybrid Production</p>
                 <img className="projectLogo heinekenLogo" src="/projects/heineken/heineken-logo.png" alt="Heineken" />
                 <h2 className="srOnly" id="heineken-title">Heineken — Fans Have More Friends</h2>
               </div>
@@ -197,10 +204,60 @@ export default function Home() {
                 <figcaption><strong>Blue-hour environment</strong><span>LED background / Final image</span></figcaption>
               </figure>
             </div>
-          </article>          <article className="featuredProject kauflandProject" id="kaufland" aria-labelledby="kaufland-title">
+          </article>
+
+          <article className="featuredProject newBalanceProject" id="new-balance" aria-labelledby="new-balance-title">
+            <header className="featureHeader newBalanceHeader">
+              <div className="projectIdentity">
+                <p className="eyebrow">Gator Run / Full CGI Campaign</p>
+                <img className="projectLogo newBalanceLogo" src="/projects/new-balance/new-balance-logo.png" alt="New Balance" />
+                <h2 className="srOnly" id="new-balance-title">New Balance — Gator Run</h2>
+              </div>
+              <div className="featureSummary">
+                <p>“Gator Run” introduces a baby gator through four fully CG campaign films and a suite of stills. Frame23 Studio built the project entirely in 3D; Vellumhaus handled previsualization, editorial, conform and the final stills package.</p>
+                <dl className="creditGrid">
+                  <div><dt>Client</dt><dd>New Balance</dd></div>
+                  <div><dt>Creative Agency</dt><dd>Red Buoy</dd></div>
+                  <div><dt>Director / Photographer</dt><dd>Tom Emmerson</dd></div>
+                  <div><dt>Production Company</dt><dd>Business Club</dd></div>
+                  <div><dt>VFX / Full CGI</dt><dd>Frame23 Studio</dd></div>
+                  <div><dt>Vellumhaus</dt><dd>Previs / Edit / Conform / Stills</dd></div>
+                </dl>
+              </div>
+            </header>
+
+            <div className="gatorFilmGrid" aria-label="New Balance Gator Run campaign films">
+              {gatorRunFilms.map((film) => (
+                <figure className="gatorFilm" key={film.id}>
+                  <div className="assetBar"><span>Gator Run / {film.id}</span><span>Full CGI</span></div>
+                  <video autoPlay loop muted playsInline preload="metadata" poster={`/projects/new-balance/${film.poster}`} aria-label={`${film.title}, New Balance Gator Run campaign film`}>
+                    <source src={`/projects/new-balance/${film.file}`} type="video/mp4" />
+                  </video>
+                  <figcaption><strong>{film.title}</strong><span>New Balance / Gator Run</span></figcaption>
+                </figure>
+              ))}
+            </div>
+
+            <section className="gatorStills" aria-labelledby="gator-stills-title">
+              <div className="gatorStillsHeading">
+                <h3 id="gator-stills-title">Campaign stills.</h3>
+                <span>Full CGI / Frame23 Studio</span>
+              </div>
+              <div className="gatorStillGrid">
+                {gatorRunFilms.map((still) => (
+                  <figure key={still.poster}>
+                    <img src={`/projects/new-balance/${still.poster}`} alt={`${still.title}, New Balance Gator Run campaign still`} />
+                    <figcaption>{still.id} / {still.title}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </section>
+          </article>
+
+          <article className="featuredProject kauflandProject" id="kaufland" aria-labelledby="kaufland-title">
             <header className="featureHeader">
               <div className="projectIdentity">
-                <p className="eyebrow">Project 02 / Full AI / 2026</p>
+                <p className="eyebrow">Full AI Film / 2026</p>
                 <img className="projectLogo kauflandLogo" src="/projects/kaufland/kaufland-logo.png" alt="Kaufland" />
                 <h2 className="srOnly" id="kaufland-title">Kaufland Romania</h2>
               </div>
@@ -248,4 +305,3 @@ export default function Home() {
     </>
   );
 }
-
