@@ -19,7 +19,7 @@ const projects = [
     discipline: "AI / 3D / VFX",
     logo: "/projects/house-of-errors/logo.svg",
     railLogo: "/projects/house-of-errors/logo.svg",
-    preview: "/projects/house-of-errors/ss25-poster.jpg",
+    preview: "/projects/house-of-errors/moss-poster.jpg",
   },
   {
     id: "heineken",
@@ -37,7 +37,7 @@ const projects = [
     discipline: "Previs / Edit / Full CGI",
     logo: "/projects/new-balance/new-balance-logo.png",
     railLogo: "/projects/new-balance/new-balance-logo.png",
-    preview: "/projects/new-balance/follow-leader.jpg",
+    preview: "/projects/new-balance/egg-hatch.jpg",
   },
   {
     id: "kaufland",
