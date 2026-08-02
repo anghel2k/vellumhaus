@@ -100,35 +100,6 @@ export default function Home() {
             </div>
           </article>
 
-          <article className="featuredProject kauflandProject" id="kaufland" aria-labelledby="kaufland-title">
-            <header className="featureHeader">
-              <div className="projectIdentity">
-                <p className="eyebrow">Project 02 / Full AI / 2026</p>
-                <img className="projectLogo kauflandLogo" src="/projects/kaufland/kaufland-logo.png" alt="Kaufland" />
-                <h2 className="srOnly" id="kaufland-title">Kaufland Romania</h2>
-              </div>
-              <div className="featureSummary">
-                <p>A 90-second film made entirely with AI, built scene by scene from designed keyframes. Every shot was video-generated, composited and synchronised into a continuous edit, then colour-graded for one cohesive final look.</p>
-                <dl className="creditGrid">
-                  <div><dt>Client</dt><dd>Kaufland Romania</dd></div>
-                  <div><dt>Agency</dt><dd>Saga Film</dd></div>
-                  <div><dt>Role</dt><dd>Full AI Film Production</dd></div>
-                  <div><dt>Workflow</dt><dd>Keyframes / Generation / Composite / Grade</dd></div>
-                </dl>
-              </div>
-            </header>
-
-            <div className="kauflandFilm">
-              <figure className="featureReel">
-                <div className="reelTop"><span>Master Film / 01</span><span>01:30 / Sound on</span></div>
-                <video controls playsInline preload="metadata" poster="/projects/kaufland/kaufland-poster.jpg" aria-label="Kaufland Romania full AI film">
-                  <source src="/projects/kaufland/kaufland-film.mp4" type="video/mp4" />
-                </video>
-                <figcaption><strong>Generated shot by shot.</strong><span>Kaufland Romania / 2026</span></figcaption>
-              </figure>
-            </div>
-          </article>
-
           <article className="featuredProject hoeProject" id="house-of-errors" aria-labelledby="house-of-errors-title">
             <header className="hoeBrandHeader">
               <p className="eyebrow">House of Errors / Two campaigns</p>
@@ -226,7 +197,36 @@ export default function Home() {
                 <figcaption><strong>Blue-hour environment</strong><span>LED background / Final image</span></figcaption>
               </figure>
             </div>
+          </article>          <article className="featuredProject kauflandProject" id="kaufland" aria-labelledby="kaufland-title">
+            <header className="featureHeader">
+              <div className="projectIdentity">
+                <p className="eyebrow">Project 02 / Full AI / 2026</p>
+                <img className="projectLogo kauflandLogo" src="/projects/kaufland/kaufland-logo.png" alt="Kaufland" />
+                <h2 className="srOnly" id="kaufland-title">Kaufland Romania</h2>
+              </div>
+              <div className="featureSummary">
+                <p>A 90-second film made entirely with AI, built scene by scene from designed keyframes. Every shot was video-generated, composited and synchronised into a continuous edit, then colour-graded for one cohesive final look.</p>
+                <dl className="creditGrid">
+                  <div><dt>Client</dt><dd>Kaufland Romania</dd></div>
+                  <div><dt>Agency</dt><dd>Saga Film</dd></div>
+                  <div><dt>Role</dt><dd>Full AI Film Production</dd></div>
+                  <div><dt>Workflow</dt><dd>Keyframes / Generation / Composite / Grade</dd></div>
+                </dl>
+              </div>
+            </header>
+
+            <div className="kauflandFilm">
+              <figure className="featureReel">
+                <div className="reelTop"><span>Master Film / 01</span><span>01:30 / Sound on</span></div>
+                <video controls playsInline preload="metadata" poster="/projects/kaufland/kaufland-poster.jpg" aria-label="Kaufland Romania full AI film">
+                  <source src="/projects/kaufland/kaufland-film.mp4" type="video/mp4" />
+                </video>
+                <figcaption><strong>Generated shot by shot.</strong><span>Kaufland Romania / 2026</span></figcaption>
+              </figure>
+            </div>
           </article>
+
+
         </section>
 
         <section className="contactSection" id="contact" aria-labelledby="contact-title">
