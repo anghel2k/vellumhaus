@@ -12,6 +12,13 @@ const stills = [
   { title: "Ciao! Lemon", file: "lemon-still.jpg" },
 ];
 
+const houseOfErrorsStills = [
+  { id: "01", file: "ss25-01.jpg" },
+  { id: "02", file: "ss25-02.jpg" },
+  { id: "03", file: "ss25-03.jpg" },
+  { id: "04", file: "ss25-04.jpg" },
+];
+
 export default function Home() {
   return (
     <>
@@ -46,7 +53,14 @@ export default function Home() {
         </section>
 
         <div className="ticker" aria-hidden="true">
-          <div>HUMAN JUDGEMENT · MACHINE ASSISTANCE · CONTROLLED FINISH · HUMAN JUDGEMENT · MACHINE ASSISTANCE · CONTROLLED FINISH ·</div>
+          <div className="tickerTrack">
+            <span>HUMAN JUDGEMENT · MACHINE ASSISTANCE · DESIGNED KEYFRAMES · CONTROLLED FINISH · COMPOSITING · COLOUR · MOTION · FINAL IMAGE ·&nbsp;</span>
+            <span>HUMAN JUDGEMENT · MACHINE ASSISTANCE · DESIGNED KEYFRAMES · CONTROLLED FINISH · COMPOSITING · COLOUR · MOTION · FINAL IMAGE ·&nbsp;</span>
+            <span>HUMAN JUDGEMENT · MACHINE ASSISTANCE · DESIGNED KEYFRAMES · CONTROLLED FINISH · COMPOSITING · COLOUR · MOTION · FINAL IMAGE ·&nbsp;</span>
+            <span>HUMAN JUDGEMENT · MACHINE ASSISTANCE · DESIGNED KEYFRAMES · CONTROLLED FINISH · COMPOSITING · COLOUR · MOTION · FINAL IMAGE ·&nbsp;</span>
+            <span>HUMAN JUDGEMENT · MACHINE ASSISTANCE · DESIGNED KEYFRAMES · CONTROLLED FINISH · COMPOSITING · COLOUR · MOTION · FINAL IMAGE ·&nbsp;</span>
+            <span>HUMAN JUDGEMENT · MACHINE ASSISTANCE · DESIGNED KEYFRAMES · CONTROLLED FINISH · COMPOSITING · COLOUR · MOTION · FINAL IMAGE ·&nbsp;</span>
+          </div>
         </div>
 
         <section className="workSection" id="work" aria-labelledby="work-title">
@@ -120,6 +134,73 @@ export default function Home() {
                 <figcaption><strong>Generated shot by shot.</strong><span>Kaufland Romania / 2026</span></figcaption>
               </figure>
             </div>
+          </article>
+
+          <article className="featuredProject hoeProject" aria-labelledby="house-of-errors-title">
+            <header className="hoeBrandHeader">
+              <p className="eyebrow">House of Errors / Two campaigns</p>
+              <img src="/projects/house-of-errors/logo.svg" alt="House of Errors" />
+              <h2 className="srOnly" id="house-of-errors-title">House of Errors — selected work</h2>
+            </header>
+
+            <section className="hoeCampaign mossCampaign" aria-labelledby="moss-title">
+              <figure className="campaignFilm mossFilm">
+                <div className="assetBar"><span>Campaign 01 / Film</span><span>00:24 / Loop</span></div>
+                <video autoPlay loop muted playsInline preload="metadata" poster="/projects/house-of-errors/moss-poster.jpg" aria-label="House of Errors Embroidered Moss Denim film">
+                  <source src="/projects/house-of-errors/moss.mp4" type="video/mp4" />
+                </video>
+                <figcaption><strong>Embroidered Moss Denim</strong><span>AI Post-Production</span></figcaption>
+              </figure>
+
+              <div className="campaignDetails">
+                <p className="campaignIndex">01 / AI Post-Production</p>
+                <h3 id="moss-title">Embroidered<br />Moss Denim</h3>
+                <p className="campaignDescription">Shot and directed by Tom Emmerson, the live-action material was extended through designed input and output keyframes. The generated motion was composited, graded and edited into a tactile film where embroidered moss grows through the denim.</p>
+                <dl className="campaignCredits">
+                  <div><dt>Client</dt><dd>House of Errors</dd></div>
+                  <div><dt>Agency</dt><dd>Red Buoy</dd></div>
+                  <div><dt>Director / Photographer</dt><dd>Tom Emmerson</dd></div>
+                  <div><dt>Workflow</dt><dd>Keyframes / I2V / Composite / Grade / Edit</dd></div>
+                </dl>
+              </div>
+            </section>
+
+            <section className="hoeCampaign ss25Campaign" aria-labelledby="ss25-title">
+              <div className="ss25Intro">
+                <div>
+                  <p className="campaignIndex">02 / 3D + VFX</p>
+                  <h3 id="ss25-title">SS25</h3>
+                </div>
+                <div>
+                  <p className="campaignDescription">The stacked paint cans beneath the talent were built and rendered in 3D, replaced into the photographed plates and given subtle animation. The result keeps the surreal intervention grounded in the original light, scale and shadows.</p>
+                  <dl className="campaignCredits">
+                    <div><dt>Client</dt><dd>House of Errors</dd></div>
+                    <div><dt>Agency</dt><dd>Red Buoy</dd></div>
+                    <div><dt>Director</dt><dd>Tom Emmerson</dd></div>
+                    <div><dt>Workflow</dt><dd>3D / Render / Comp Replacement / Animation</dd></div>
+                  </dl>
+                </div>
+              </div>
+
+              <div className="ss25Showcase">
+                <figure className="campaignFilm ss25Film">
+                  <div className="assetBar"><span>Campaign 02 / Film</span><span>00:52 / Sound on</span></div>
+                  <video controls playsInline preload="metadata" poster="/projects/house-of-errors/ss25-poster.jpg" aria-label="House of Errors SS25 film">
+                    <source src="/projects/house-of-errors/ss25.mp4" type="video/mp4" />
+                  </video>
+                  <figcaption><strong>House of Errors SS25</strong><span>3D + VFX</span></figcaption>
+                </figure>
+
+                <div className="ss25StillGrid" aria-label="House of Errors SS25 campaign stills">
+                  {houseOfErrorsStills.map((still) => (
+                    <figure key={still.file}>
+                      <img src={`/projects/house-of-errors/${still.file}`} alt={`House of Errors SS25 campaign still ${still.id}`} />
+                      <figcaption>SS25 / {still.id}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            </section>
           </article>
         </section>
 

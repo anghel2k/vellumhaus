@@ -37,7 +37,8 @@ main:focus { outline:none; }
 .heroPositioning span { max-width:520px; color:white; font-size:9px; font-weight:700; line-height:1.45; letter-spacing:.12em; text-transform:uppercase; }
 .heroFooter a { font-size:9px; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; white-space:nowrap; }
 .ticker { overflow:hidden; color:var(--paper); background:var(--ink); border-bottom:1.5px solid var(--ink); }
-.ticker div { width:max-content; padding:13px 0; font-size:9px; letter-spacing:.2em; animation:ticker 28s linear infinite; }
+.tickerTrack { width:max-content; display:flex; animation:ticker 34s linear infinite; will-change:transform; }
+.tickerTrack span { flex:none; padding:13px 0; font-size:9px; letter-spacing:.2em; white-space:nowrap; }
 
 .eyebrow { color:var(--grey); font-size:9px; letter-spacing:.15em; text-transform:uppercase; }
 .contactSection h2 { font-family:var(--display); font-weight:900; font-size:clamp(58px,9vw,144px); line-height:.8; letter-spacing:-.065em; text-transform:lowercase; }
@@ -87,6 +88,38 @@ main:focus { outline:none; }
 .featureReel figcaption strong { font-family:var(--display); font-size:17px; letter-spacing:-.025em; text-transform:none; }
 .featureReel figcaption span { color:rgba(255,255,255,.72); }
 
+.hoeBrandHeader { position:relative; min-height:430px; padding:54px 24px; display:flex; align-items:center; justify-content:center; color:white; background:var(--ink); border-bottom:1.5px solid var(--paper); }
+.hoeBrandHeader>.eyebrow { position:absolute; left:24px; top:54px; color:rgba(255,255,255,.62); }
+.hoeBrandHeader img { width:min(82vw,1180px); filter:invert(1); }
+.hoeCampaign h3 { font-family:var(--display); font-size:clamp(52px,7.2vw,112px); font-weight:900; line-height:.82; letter-spacing:-.065em; }
+.mossCampaign { padding:24px; display:grid; grid-template-columns:minmax(340px,.8fr) minmax(420px,1.2fr); align-items:center; gap:clamp(44px,8vw,140px); color:var(--paper); background:#17382f; border-bottom:1.5px solid var(--paper); }
+.campaignFilm { min-width:0; border:1.5px solid currentColor; }
+.campaignFilm video { width:100%; background:#0d0d0d; }
+.mossFilm video { aspect-ratio:160/233; object-fit:cover; }
+.assetBar,.campaignFilm>figcaption { min-height:48px; padding:0 13px; display:flex; align-items:center; justify-content:space-between; gap:16px; font-size:8px; letter-spacing:.13em; text-transform:uppercase; }
+.assetBar { border-bottom:1.5px solid currentColor; }
+.campaignFilm>figcaption { border-top:1.5px solid currentColor; }
+.campaignFilm>figcaption strong { font-family:var(--display); font-size:15px; letter-spacing:-.025em; text-transform:none; }
+.campaignFilm>figcaption span { opacity:.64; }
+.campaignDetails { align-self:center; }
+.campaignIndex { margin-bottom:28px; font-size:9px; letter-spacing:.15em; text-transform:uppercase; opacity:.68; }
+.campaignDescription { margin-top:38px; max-width:690px; font-family:var(--display); font-size:clamp(17px,1.8vw,25px); font-weight:600; line-height:1.15; letter-spacing:-.025em; }
+.campaignCredits { margin-top:46px; display:grid; grid-template-columns:1fr 1fr; border-top:1.5px solid currentColor; }
+.campaignCredits div { min-width:0; padding:13px 14px 16px 0; border-bottom:1px solid currentColor; }
+.campaignCredits dt { margin-bottom:5px; font-size:8px; letter-spacing:.13em; text-transform:uppercase; opacity:.62; }
+.campaignCredits dd { font-family:var(--display); font-size:13px; font-weight:700; line-height:1.25; }
+.ss25Campaign { padding:70px 24px 24px; color:var(--ink); background:var(--paper-dark); }
+.ss25Intro { display:grid; grid-template-columns:minmax(320px,.8fr) minmax(420px,1.2fr); gap:clamp(44px,9vw,160px); align-items:end; padding-bottom:64px; }
+.ss25Intro .campaignDescription { margin-top:0; }
+.ss25Showcase { display:grid; grid-template-columns:minmax(260px,.58fr) minmax(500px,1.42fr); gap:16px; align-items:start; }
+.ss25Film { color:var(--paper); background:var(--ink); border-color:var(--ink); }
+.ss25Film video { aspect-ratio:9/16; object-fit:cover; }
+.ss25StillGrid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--ink); border:1.5px solid var(--ink); }
+.ss25StillGrid figure { position:relative; min-width:0; aspect-ratio:4/5; overflow:hidden; background:var(--paper); }
+.ss25StillGrid img { width:100%; height:100%; object-fit:cover; transition:transform .5s cubic-bezier(.2,.8,.2,1); }
+.ss25StillGrid figure:hover img { transform:scale(1.02); }
+.ss25StillGrid figcaption { position:absolute; left:9px; bottom:9px; padding:7px 9px; color:var(--paper); background:var(--ink); font-size:8px; letter-spacing:.13em; text-transform:uppercase; }
+
 .contactSection { position:relative; min-height:760px; padding:72px 24px 30px; overflow:hidden; color:var(--paper); background:var(--ink); }
 .contactSection h2 { margin-top:42px; }
 .contactLead { position:relative; z-index:2; margin-top:38px; max-width:650px; font-family:var(--display); font-size:clamp(18px,2vw,28px); font-weight:600; line-height:1.15; letter-spacing:-.025em; }
@@ -101,7 +134,7 @@ main:focus { outline:none; }
 .contactMark { position:absolute; right:-6%; top:-10%; width:min(49vw,680px); opacity:.08; }
 footer { height:68px; padding:0 24px; display:flex; justify-content:space-between; align-items:center; color:var(--paper); background:var(--ink); border-top:1.5px solid var(--paper); font-size:9px; letter-spacing:.14em; text-transform:uppercase; }
 footer a { text-decoration:none; }
-@keyframes ticker { to { transform:translateX(-50%); } }
+@keyframes ticker { to { transform:translateX(-16.6666667%); } }
 @keyframes markSpin { to { transform:rotate(360deg); } }
 
 @media (max-width:900px) {
@@ -127,6 +160,16 @@ footer a { text-decoration:none; }
   .stillGrid figure { height:auto; aspect-ratio:4/5; }
   .kauflandLogo { width:min(46%,220px); }
   .kauflandFilm { padding:15px; }
+  .hoeBrandHeader { min-height:280px; padding:42px 15px; }
+  .hoeBrandHeader>.eyebrow { left:15px; top:42px; }
+  .hoeBrandHeader img { width:min(88vw,720px); }
+  .mossCampaign { grid-template-columns:1fr; gap:48px; padding:15px 15px 54px; }
+  .mossFilm { width:min(86vw,520px); }
+  .campaignDetails { padding:0 0 0; }
+  .ss25Campaign { padding:54px 15px 15px; }
+  .ss25Intro { grid-template-columns:1fr; gap:40px; padding-bottom:48px; }
+  .ss25Showcase { grid-template-columns:1fr; gap:15px; }
+  .ss25Film { width:min(86vw,430px); }
   .contactSection { padding:58px 15px 24px; }
   .contactGrid { grid-template-columns:1fr 1fr; gap:24px; }
   footer { padding:0 15px; }
@@ -137,6 +180,9 @@ footer a { text-decoration:none; }
   .siteHeader nav a { font-size:8px; }
   .contactNav { padding:9px 11px; }
   .creditGrid { grid-template-columns:1fr; }
+  .campaignCredits { grid-template-columns:1fr; }
+  .assetBar,.campaignFilm>figcaption { min-height:44px; padding:0 10px; }
+  .campaignFilm>figcaption strong { font-size:13px; }
   .reelTop,.featureReel figcaption { min-height:44px; padding:0 10px; }
   .featureReel figcaption strong { font-size:14px; }
   .contactEmail { align-items:flex-end; }

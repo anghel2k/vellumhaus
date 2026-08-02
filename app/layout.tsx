@@ -5,9 +5,24 @@ import "@fontsource/space-mono/700.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vellumhaus.studio"),
   title: "vellumhaus",
   description: "AI-hybrid post-production by Anghel Robert. Keyframes, retouch, compositing and final film.",
   icons: { icon: "/brand/vh_favicon.svg", shortcut: "/brand/vh_favicon.svg" },
+  openGraph: {
+    title: "vellumhaus",
+    description: "AI-hybrid post-production by Anghel Robert. Keyframes, retouch, compositing and final film.",
+    url: "https://vellumhaus.studio",
+    siteName: "vellumhaus",
+    type: "website",
+    images: [{ url: "/og.png", width: 1730, height: 909, alt: "vellumhaus — AI-hybrid post-production" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "vellumhaus",
+    description: "AI-hybrid post-production by Anghel Robert.",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
