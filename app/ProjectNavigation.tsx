@@ -53,29 +53,65 @@ function scrollToProject(event: ReactMouseEvent<HTMLAnchorElement>, id: string, 
 }
 
 export function ProjectLogoRail() {
-  const railRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const groupRef = useRef<HTMLDivElement>(null);
+  const pausedRef = useRef(false);
 
-  const setRailPaused = (paused: boolean) => {
-    const animation = railRef.current
-      ?.querySelector(".projectLogoRailTrack")
-      ?.getAnimations()[0];
+  useEffect(() => {
+    const track = trackRef.current;
+    const group = groupRef.current;
+    if (!track || !group) return;
 
-    if (!animation) return;
-    if (paused) animation.pause();
-    else animation.play();
-  };
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let frame = 0;
+    let lastTime = 0;
+    let offset = 0;
+    let loopWidth = 0;
+
+    const measure = () => {
+      const nextWidth = group.getBoundingClientRect().width;
+      if (loopWidth > 0 && nextWidth > 0) offset = (offset / loopWidth) * nextWidth;
+      loopWidth = nextWidth;
+    };
+
+    const animate = (time: number) => {
+      if (!lastTime) lastTime = time;
+      const elapsed = Math.min(time - lastTime, 64);
+      lastTime = time;
+
+      if (!pausedRef.current && !reducedMotion.matches && loopWidth > 0) {
+        offset = (offset + (elapsed * loopWidth) / 58000) % loopWidth;
+        track.style.transform = `translate3d(${-offset}px, 0, 0)`;
+      }
+
+      frame = window.requestAnimationFrame(animate);
+    };
+
+    measure();
+    window.addEventListener("resize", measure);
+    frame = window.requestAnimationFrame(animate);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("resize", measure);
+    };
+  }, []);
 
   return (
     <div
-      ref={railRef}
       className="projectLogoRail"
       aria-label="Jump to a selected project"
-      onPointerEnter={() => setRailPaused(true)}
-      onPointerLeave={() => setRailPaused(false)}
+      onPointerEnter={() => { pausedRef.current = true; }}
+      onPointerLeave={() => { pausedRef.current = false; }}
     >
-      <div className="projectLogoRailTrack">
+      <div className="projectLogoRailTrack" ref={trackRef}>
         {[0, 1].map((copy) => (
-          <div className="projectLogoRailGroup" aria-hidden={copy === 1} key={copy}>
+          <div
+            className="projectLogoRailGroup"
+            aria-hidden={copy === 1}
+            key={copy}
+            ref={copy === 0 ? groupRef : undefined}
+          >
             {projects.map((project) => (
               <a
                 href={`#${project.id}`}
@@ -169,4 +205,3 @@ export function WorkIndex() {
     </>
   );
 }
-
