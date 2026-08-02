@@ -13,15 +13,6 @@ const projects = [
     preview: "/projects/san-pellegrino/pool-still.jpg",
   },
   {
-    id: "kaufland",
-    brand: "Kaufland Romania",
-    title: "90-second AI Film",
-    discipline: "Full AI / Film",
-    logo: "/projects/kaufland/kaufland-logo.png",
-    railLogo: "/projects/kaufland/kaufland-logo-white.png",
-    preview: "/projects/kaufland/kaufland-poster.jpg",
-  },
-  {
     id: "house-of-errors",
     brand: "House of Errors",
     title: "Embroidered Moss Denim + SS25",
@@ -38,6 +29,15 @@ const projects = [
     logo: "/projects/heineken/heineken-logo.png",
     railLogo: "/projects/heineken/heineken-logo.png",
     preview: "/projects/heineken/heineken-blue.jpg",
+  },
+  {
+    id: "kaufland",
+    brand: "Kaufland Romania",
+    title: "90-second AI Film",
+    discipline: "Full AI / Film",
+    logo: "/projects/kaufland/kaufland-logo.png",
+    railLogo: "/projects/kaufland/kaufland-logo-white.png",
+    preview: "/projects/kaufland/kaufland-poster.jpg",
   },
 ] as const;
 
