@@ -37,10 +37,10 @@ main:focus { outline:none; }
 .heroPositioning strong { max-width:440px; font-family:var(--display); font-size:clamp(24px,2.4vw,38px); font-weight:900; line-height:.84; letter-spacing:-.05em; text-transform:uppercase; }
 .heroPositioning span { max-width:520px; color:white; font-size:9px; font-weight:700; line-height:1.45; letter-spacing:.12em; text-transform:uppercase; }
 .heroFooter a { font-size:9px; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; white-space:nowrap; }
-.projectLogoRail { grid-area:rail; min-width:0; height:76px; align-self:end; overflow:hidden; display:flex; align-items:center; color:var(--ink); background:rgba(241,239,232,.96); border:1.5px solid rgba(255,255,255,.92); border-radius:3px; }
+.projectLogoRail { grid-area:rail; min-width:0; height:76px; align-self:end; overflow:hidden; display:flex; align-items:center; color:white; background:transparent; border:0; border-radius:0; }
 .projectLogoRailTrack { width:max-content; display:flex; animation:projectLogoRail 58s linear infinite; will-change:transform; }
 .projectLogoRailGroup { flex:none; display:flex; align-items:center; }
-.projectLogoRail a { width:clamp(126px,10vw,180px); height:73px; padding:13px 20px; flex:none; display:flex; align-items:center; justify-content:center; opacity:.45; filter:grayscale(1); transition:opacity .25s ease,filter .25s ease,transform .25s ease,background .25s ease; }
+.projectLogoRail a { width:clamp(126px,10vw,180px); height:73px; padding:13px 20px; flex:none; display:flex; align-items:center; justify-content:center; opacity:.58; filter:brightness(0) invert(1); transition:opacity .25s ease,transform .25s ease; }
 .projectLogoRail img { width:100%; height:100%; object-fit:contain; }
 .heroPositioning { grid-area:position; }
 .heroWorkLink { grid-area:view; }
@@ -67,9 +67,7 @@ main:focus { outline:none; }
 .workIndexCopy small { display:flex; align-items:center; justify-content:space-between; gap:20px; font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
 .workIndexCard:focus-visible .workIndexReveal { opacity:1; transform:none; }
 
-.ticker { overflow:hidden; color:var(--paper); background:var(--ink); border-bottom:1.5px solid var(--ink); }
-.tickerTrack { width:max-content; display:flex; animation:ticker 34s linear infinite; will-change:transform; }
-.tickerTrack span { flex:none; padding:13px 0; font-size:9px; letter-spacing:.2em; white-space:nowrap; }
+.ticker { height:36px; overflow:hidden; background:var(--ink); border-bottom:1.5px solid var(--ink); }
 
 .eyebrow { color:var(--grey); font-size:9px; letter-spacing:.15em; text-transform:uppercase; }
 .contactSection h2 { font-family:var(--display); font-weight:900; font-size:clamp(58px,9vw,144px); line-height:.8; letter-spacing:-.065em; text-transform:lowercase; }
@@ -176,15 +174,13 @@ main:focus { outline:none; }
 .contactMark { position:absolute; right:-6%; top:-10%; width:min(49vw,680px); opacity:.08; }
 footer { height:68px; padding:0 24px; display:flex; justify-content:space-between; align-items:center; color:var(--paper); background:var(--ink); border-top:1.5px solid var(--paper); font-size:9px; letter-spacing:.14em; text-transform:uppercase; }
 footer a { text-decoration:none; }
-@keyframes ticker { to { transform:translateX(-16.6666667%); } }
 @keyframes markSpin { to { transform:rotate(360deg); } }
 @keyframes projectLogoRail { to { transform:translateX(-50%); } }
 @keyframes workLayerIn { from { opacity:0; } }
 @keyframes workPanelIn { from { opacity:0; transform:translateY(22px) scale(.985); } }
 
 @media (hover:hover) and (pointer:fine) {
-  .projectLogoRail:hover .projectLogoRailTrack { animation-play-state:paused; }
-  .projectLogoRail a:hover { opacity:1; filter:none; transform:translateY(-2px) scale(1.035); background:white; }
+  .projectLogoRail a:hover { opacity:1; filter:brightness(0) invert(1); transform:translateY(-2px) scale(1.035); background:transparent; }
   .workIndexCard:hover .workIndexPreview { transform:scale(1.045); filter:saturate(.8) contrast(1.05); }
   .workIndexCard:hover .workIndexReveal { opacity:1; transform:none; }
   .workIndexHeader button:hover { color:var(--ink); background:var(--paper); }
@@ -280,7 +276,8 @@ footer a { text-decoration:none; }
 }
 @media (prefers-reduced-motion:reduce) {
   html { scroll-behavior:auto; }
-  .ticker div,.projectLogoRailTrack { animation:none; }
+  .projectLogoRailTrack { animation:none; }
   .heroMarkSpin { animation:none; }
   .stillGrid img,.contactEmail { transition:none; }
 }
+
