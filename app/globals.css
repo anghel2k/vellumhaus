@@ -71,6 +71,22 @@ main:focus { outline:none; }
 .stillGrid figure:hover img { transform:scale(1.025); }
 .stillGrid figcaption { position:absolute; left:10px; bottom:10px; padding:8px 10px; color:white; background:var(--ink); font-size:8px; letter-spacing:.13em; text-transform:uppercase; }
 
+.kauflandProject .featureHeader { color:white; background:#eb001b; }
+.kauflandProject .projectIdentity>.eyebrow { color:rgba(255,255,255,.72); }
+.kauflandLogo { width:min(44%,260px); }
+.kauflandProject .featureSummary { align-self:center; }
+.kauflandProject .creditGrid { border-color:rgba(255,255,255,.82); }
+.kauflandProject .creditGrid div { border-color:rgba(255,255,255,.55); }
+.kauflandProject .creditGrid dt { color:rgba(255,255,255,.68); }
+.kauflandFilm { padding:28px 24px 32px; background:var(--ink); }
+.featureReel { color:var(--paper); background:#eb001b; border:1.5px solid var(--paper); }
+.reelTop,.featureReel figcaption { min-height:48px; padding:0 14px; display:flex; align-items:center; justify-content:space-between; gap:18px; font-size:8px; letter-spacing:.13em; text-transform:uppercase; }
+.reelTop { border-bottom:1.5px solid var(--paper); }
+.featureReel video { width:100%; aspect-ratio:40/17; object-fit:cover; background:#000; }
+.featureReel figcaption { border-top:1.5px solid var(--paper); }
+.featureReel figcaption strong { font-family:var(--display); font-size:17px; letter-spacing:-.025em; text-transform:none; }
+.featureReel figcaption span { color:rgba(255,255,255,.72); }
+
 .contactSection { position:relative; min-height:760px; padding:72px 24px 30px; overflow:hidden; color:var(--paper); background:var(--ink); }
 .contactSection h2 { margin-top:42px; }
 .contactLead { position:relative; z-index:2; margin-top:38px; max-width:650px; font-family:var(--display); font-size:clamp(18px,2vw,28px); font-weight:600; line-height:1.15; letter-spacing:-.025em; }
@@ -109,6 +125,8 @@ footer a { text-decoration:none; }
   .stillSection { padding:42px 15px 15px; }
   .stillGrid { grid-template-columns:1fr; }
   .stillGrid figure { height:auto; aspect-ratio:4/5; }
+  .kauflandLogo { width:min(46%,220px); }
+  .kauflandFilm { padding:15px; }
   .contactSection { padding:58px 15px 24px; }
   .contactGrid { grid-template-columns:1fr 1fr; gap:24px; }
   footer { padding:0 15px; }
@@ -119,6 +137,8 @@ footer a { text-decoration:none; }
   .siteHeader nav a { font-size:8px; }
   .contactNav { padding:9px 11px; }
   .creditGrid { grid-template-columns:1fr; }
+  .reelTop,.featureReel figcaption { min-height:44px; padding:0 10px; }
+  .featureReel figcaption strong { font-size:14px; }
   .contactEmail { align-items:flex-end; }
 }
 @media (prefers-reduced-motion:reduce) {
