@@ -41,8 +41,10 @@ function scrollToProject(event: ReactMouseEvent<HTMLAnchorElement>, id: string, 
   event.preventDefault();
   close?.();
   window.setTimeout(() => {
+    const alignProject = () => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
     window.history.pushState(null, "", `#${id}`);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    alignProject();
+    window.setTimeout(alignProject, 900);
   }, 0);
 }
 
