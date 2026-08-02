@@ -202,6 +202,38 @@ export default function Home() {
               </div>
             </section>
           </article>
+
+          <article className="featuredProject heinekenProject" aria-labelledby="heineken-title">
+            <header className="featureHeader heinekenHeader">
+              <div className="projectIdentity">
+                <p className="eyebrow">Project 04 / Hybrid Production</p>
+                <img className="projectLogo heinekenLogo" src="/projects/heineken/heineken-logo.png" alt="Heineken" />
+                <h2 className="srOnly" id="heineken-title">Heineken — Fans Have More Friends</h2>
+              </div>
+              <div className="featureSummary">
+                <p>For “Fans Have More Friends”, we built the campaign environments before the shoot—combining AI, 3D and VFX into LED-ready backgrounds matched to the talent, lighting and photographic setup. Technical 3D planning mapped every bottle position so the individual bottles resolve into one larger bottle at the centre of the image.</p>
+                <dl className="creditGrid">
+                  <div><dt>Client</dt><dd>Heineken</dd></div>
+                  <div><dt>Agency</dt><dd>LePub</dd></div>
+                  <div><dt>Photographer</dt><dd>Justin Bettman</dd></div>
+                  <div><dt>Production</dt><dd>Breadthemakery</dd></div>
+                  <div><dt>Role</dt><dd>Technical Image Production</dd></div>
+                  <div><dt>Pipeline</dt><dd>AI / 3D / VFX / LED</dd></div>
+                </dl>
+              </div>
+            </header>
+
+            <div className="heinekenGallery" aria-label="Heineken Fans Have More Friends campaign images">
+              <figure className="heinekenFrame">
+                <img src="/projects/heineken/heineken-day.jpg" alt="Heineken Fans Have More Friends campaign image in a daylight bar environment" />
+                <figcaption><strong>Daylight environment</strong><span>LED background / Final image</span></figcaption>
+              </figure>
+              <figure className="heinekenFrame">
+                <img src="/projects/heineken/heineken-blue.jpg" alt="Heineken Fans Have More Friends campaign image in a blue-hour bar environment" />
+                <figcaption><strong>Blue-hour environment</strong><span>LED background / Final image</span></figcaption>
+              </figure>
+            </div>
+          </article>
         </section>
 
         <section className="contactSection" id="contact" aria-labelledby="contact-title">
