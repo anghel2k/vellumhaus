@@ -25,7 +25,7 @@ main:focus { outline:none; }
 .contactNav { padding:11px 15px; color:white; background:var(--ultra); border:1.5px solid var(--ink); }
 .contactNav:hover { background:var(--ink); }
 
-.hero { min-height:calc(100vh - var(--header-h)); min-height:calc(100dvh - var(--header-h)); padding:22px 24px 26px; position:relative; overflow:hidden; display:grid; grid-template-rows:1fr auto; color:white; background:var(--ultra); }
+.hero { min-height:calc(100vh - var(--header-h)); min-height:calc(100svh - var(--header-h)); padding:22px 24px 26px; position:relative; overflow:hidden; display:grid; grid-template-rows:1fr auto; color:white; background:var(--ultra); }
 .hero h1 { position:relative; z-index:2; align-self:center; margin:40px 0; max-width:1320px; font-family:var(--display); font-size:clamp(64px,10.8vw,170px); font-weight:900; line-height:.78; letter-spacing:-.075em; text-transform:lowercase; }
 .hero h1 span { display:block; }
 .heroIndent { padding-left:clamp(0px,8vw,130px); }
