@@ -41,6 +41,7 @@ main:focus { outline:none; }
 .projectLogoRailTrack { width:max-content; display:flex; will-change:transform; }
 .projectLogoRailGroup { flex:none; display:flex; align-items:center; }
 .projectLogoRail a { width:clamp(126px,10vw,180px); height:73px; padding:13px 20px; flex:none; display:flex; align-items:center; justify-content:center; opacity:.58; filter:brightness(0) invert(1); transition:opacity .25s ease,transform .25s ease; }
+.projectLogoRail a[data-project="kaufland"] { width:clamp(92px,7vw,118px); padding-inline:8px; }
 .projectLogoRail img { width:100%; height:100%; object-fit:contain; }
 .heroPositioning { grid-area:position; }
 .heroWorkLink { grid-area:view; }
