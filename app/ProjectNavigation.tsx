@@ -115,6 +115,7 @@ export function ProjectLogoRail() {
             {projects.map((project) => (
               <a
                 href={`#${project.id}`}
+                data-project={project.id}
                 onClick={(event) => scrollToProject(event, project.id)}
                 tabIndex={copy === 1 ? -1 : undefined}
                 title={`View ${project.brand}`}
