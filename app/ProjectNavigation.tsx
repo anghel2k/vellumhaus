@@ -31,6 +31,15 @@ const projects = [
     preview: "/projects/heineken/heineken-blue.jpg",
   },
   {
+    id: "new-balance",
+    brand: "New Balance",
+    title: "Gator Run",
+    discipline: "Previs / Edit / Full CGI",
+    logo: "/projects/new-balance/new-balance-logo.png",
+    railLogo: "/projects/new-balance/new-balance-logo.png",
+    preview: "/projects/new-balance/follow-leader.jpg",
+  },
+  {
     id: "kaufland",
     brand: "Kaufland Romania",
     title: "90-second AI Film",
