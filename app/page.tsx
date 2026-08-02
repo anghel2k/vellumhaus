@@ -1,4 +1,5 @@
 import BouncingMark from "./BouncingMark";
+import { ProjectLogoRail, WorkIndex } from "./ProjectNavigation";
 
 const motionFilms = [
   { id: "01", title: "L'Opéra", file: "opera.mp4", poster: "opera-poster.jpg" },
@@ -30,7 +31,7 @@ export default function Home() {
           <strong>vellumhaus©</strong>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#work">Work</a>
+          <WorkIndex />
           <a className="contactNav" href="#contact">Contact</a>
         </nav>
       </header>
@@ -44,11 +45,12 @@ export default function Home() {
             <span>Final image.</span>
           </h1>
           <div className="heroFooter">
+            <ProjectLogoRail />
             <p className="heroPositioning">
               <strong>Post-Production House</strong>
               <span>Focused on AI-driven pipelines and hybrid workflows.</span>
             </p>
-            <a href="#work">View selected work <span aria-hidden="true">↓</span></a>
+            <a className="heroWorkLink" href="#work">View selected work <span aria-hidden="true">↓</span></a>
           </div>
         </section>
 
@@ -64,7 +66,7 @@ export default function Home() {
         </div>
 
         <section className="workSection" id="work" aria-labelledby="work-title">
-          <article className="featuredProject">
+          <article className="featuredProject" id="san-pellegrino">
             <header className="featureHeader">
               <div className="projectIdentity">
                 <p className="eyebrow">Featured project / 2026</p>
@@ -107,7 +109,7 @@ export default function Home() {
             </div>
           </article>
 
-          <article className="featuredProject kauflandProject" aria-labelledby="kaufland-title">
+          <article className="featuredProject kauflandProject" id="kaufland" aria-labelledby="kaufland-title">
             <header className="featureHeader">
               <div className="projectIdentity">
                 <p className="eyebrow">Project 02 / Full AI / 2026</p>
@@ -136,7 +138,7 @@ export default function Home() {
             </div>
           </article>
 
-          <article className="featuredProject hoeProject" aria-labelledby="house-of-errors-title">
+          <article className="featuredProject hoeProject" id="house-of-errors" aria-labelledby="house-of-errors-title">
             <header className="hoeBrandHeader">
               <p className="eyebrow">House of Errors / Two campaigns</p>
               <img src="/projects/house-of-errors/logo.svg" alt="House of Errors" />
@@ -203,7 +205,7 @@ export default function Home() {
             </section>
           </article>
 
-          <article className="featuredProject heinekenProject" aria-labelledby="heineken-title">
+          <article className="featuredProject heinekenProject" id="heineken" aria-labelledby="heineken-title">
             <header className="featureHeader heinekenHeader">
               <div className="projectIdentity">
                 <p className="eyebrow">Project 04 / Hybrid Production</p>
