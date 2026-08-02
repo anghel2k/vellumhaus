@@ -38,7 +38,7 @@ main:focus { outline:none; }
 .heroPositioning span { max-width:520px; color:white; font-size:9px; font-weight:700; line-height:1.45; letter-spacing:.12em; text-transform:uppercase; }
 .heroFooter a { font-size:9px; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; white-space:nowrap; }
 .projectLogoRail { grid-area:rail; min-width:0; height:76px; align-self:end; overflow:hidden; display:flex; align-items:center; color:white; background:transparent; border:0; border-radius:0; }
-.projectLogoRailTrack { width:max-content; display:flex; animation:projectLogoRail 58s linear infinite; will-change:transform; }
+.projectLogoRailTrack { width:max-content; display:flex; will-change:transform; }
 .projectLogoRailGroup { flex:none; display:flex; align-items:center; }
 .projectLogoRail a { width:clamp(126px,10vw,180px); height:73px; padding:13px 20px; flex:none; display:flex; align-items:center; justify-content:center; opacity:.58; filter:brightness(0) invert(1); transition:opacity .25s ease,transform .25s ease; }
 .projectLogoRail img { width:100%; height:100%; object-fit:contain; }
@@ -175,7 +175,6 @@ main:focus { outline:none; }
 footer { height:68px; padding:0 24px; display:flex; justify-content:space-between; align-items:center; color:var(--paper); background:var(--ink); border-top:1.5px solid var(--paper); font-size:9px; letter-spacing:.14em; text-transform:uppercase; }
 footer a { text-decoration:none; }
 @keyframes markSpin { to { transform:rotate(360deg); } }
-@keyframes projectLogoRail { to { transform:translateX(-50%); } }
 @keyframes workLayerIn { from { opacity:0; } }
 @keyframes workPanelIn { from { opacity:0; transform:translateY(22px) scale(.985); } }
 
@@ -276,8 +275,6 @@ footer a { text-decoration:none; }
 }
 @media (prefers-reduced-motion:reduce) {
   html { scroll-behavior:auto; }
-  .projectLogoRailTrack { animation:none; }
   .heroMarkSpin { animation:none; }
   .stillGrid img,.contactEmail { transition:none; }
 }
-
