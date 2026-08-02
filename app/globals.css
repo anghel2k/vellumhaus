@@ -58,6 +58,7 @@ main:focus { outline:none; }
 .workIndexCard[data-project="kaufland"] { --projectAccent:rgba(235,0,27,.94); }
 .workIndexCard[data-project="house-of-errors"] { --projectAccent:rgba(32,90,249,.94); }
 .workIndexCard[data-project="heineken"] { --projectAccent:rgba(0,122,61,.94); }
+.workIndexCard[data-project="new-balance"] { --projectAccent:rgba(235,0,55,.94); }
 .workIndexPreview { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .65s cubic-bezier(.2,.8,.2,1),filter .35s ease; }
 .workIndexReveal { position:absolute; inset:0; z-index:1; padding:22px; display:flex; flex-direction:column; justify-content:space-between; gap:22px; opacity:0; background:linear-gradient(135deg,var(--projectAccent),rgba(20,20,20,.82)); transform:translateY(12px); transition:opacity .32s ease,transform .42s cubic-bezier(.2,.8,.2,1); }
 .workIndexLogoBox { width:min(46%,250px); min-height:82px; padding:14px 18px; display:flex; align-items:center; justify-content:center; background:rgba(241,239,232,.96); border:1px solid rgba(255,255,255,.7); border-radius:15px; }
@@ -161,6 +162,26 @@ main:focus { outline:none; }
 .heinekenFrame figcaption strong { font-family:var(--display); font-size:15px; letter-spacing:-.025em; text-transform:none; }
 .heinekenFrame figcaption span { color:rgba(241,239,232,.68); }
 
+.newBalanceProject { background:#0a0a0a; }
+.newBalanceProject .featureHeader { background:var(--paper); }
+.newBalanceProject .featureSummary { align-self:center; }
+.newBalanceLogo { width:min(72%,540px); }
+.gatorFilmGrid { padding:24px; display:grid; grid-template-columns:1fr 1fr; gap:16px; color:var(--paper); background:#0a0a0a; }
+.gatorFilm { min-width:0; overflow:hidden; border:1.5px solid var(--paper); }
+.gatorFilm video { width:100%; aspect-ratio:16/9; object-fit:cover; background:#050505; }
+.gatorFilm>figcaption { min-height:48px; padding:0 13px; display:flex; align-items:center; justify-content:space-between; gap:16px; border-top:1.5px solid var(--paper); font-size:8px; letter-spacing:.13em; text-transform:uppercase; }
+.gatorFilm>figcaption strong { font-family:var(--display); font-size:15px; letter-spacing:-.025em; text-transform:none; }
+.gatorFilm>figcaption span { color:rgba(241,239,232,.66); }
+.gatorStills { padding:58px 24px 24px; color:white; background:#eb0037; }
+.gatorStillsHeading { padding-bottom:28px; display:flex; align-items:end; justify-content:space-between; gap:24px; }
+.gatorStillsHeading h3 { font-family:var(--display); font-size:clamp(48px,6.8vw,108px); font-weight:900; line-height:.8; letter-spacing:-.065em; }
+.gatorStillsHeading span { font-size:8px; letter-spacing:.14em; text-transform:uppercase; }
+.gatorStillGrid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--ink); border:1.5px solid var(--ink); }
+.gatorStillGrid figure { position:relative; min-width:0; overflow:hidden; background:var(--ink); }
+.gatorStillGrid img { width:100%; aspect-ratio:16/9; object-fit:cover; transition:transform .5s cubic-bezier(.2,.8,.2,1); }
+.gatorStillGrid figure:hover img { transform:scale(1.02); }
+.gatorStillGrid figcaption { position:absolute; left:10px; bottom:10px; padding:8px 10px; color:var(--paper); background:var(--ink); font-size:8px; letter-spacing:.13em; text-transform:uppercase; }
+
 .contactSection { position:relative; min-height:760px; padding:72px 24px 30px; overflow:hidden; color:var(--paper); background:var(--ink); }
 .contactSection h2 { margin-top:42px; }
 .contactLead { position:relative; z-index:2; margin-top:38px; max-width:650px; font-family:var(--display); font-size:clamp(18px,2vw,28px); font-weight:600; line-height:1.15; letter-spacing:-.025em; }
@@ -257,6 +278,11 @@ footer a { text-decoration:none; }
   .ss25Film { width:min(86vw,430px); }
   .heinekenGallery { grid-template-columns:1fr; padding:15px; gap:15px; }
   .heinekenLogo { width:min(72%,460px); }
+  .newBalanceLogo { width:min(76%,460px); }
+  .gatorFilmGrid { grid-template-columns:1fr; padding:15px; gap:15px; }
+  .gatorStills { padding:48px 15px 15px; }
+  .gatorStillsHeading { align-items:flex-start; flex-direction:column; }
+  .gatorStillGrid { grid-template-columns:1fr; }
   .contactSection { padding:58px 15px 24px; }
   .contactGrid { grid-template-columns:1fr 1fr; gap:24px; }
   footer { padding:0 15px; }
