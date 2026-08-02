@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type MouseEvent as ReactMouseEvent } from "react";
+import { useEffect, useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 
 const projects = [
   {
@@ -9,6 +9,7 @@ const projects = [
     title: "Ciao! Paris Social Films",
     discipline: "AI Hybrid / Motion",
     logo: "/projects/san-pellegrino/san-pellegrino-logo.png",
+    railLogo: "/projects/san-pellegrino/san-pellegrino-logo.png",
     preview: "/projects/san-pellegrino/pool-still.jpg",
   },
   {
@@ -17,6 +18,7 @@ const projects = [
     title: "90-second AI Film",
     discipline: "Full AI / Film",
     logo: "/projects/kaufland/kaufland-logo.png",
+    railLogo: "/projects/kaufland/kaufland-logo-white.png",
     preview: "/projects/kaufland/kaufland-poster.jpg",
   },
   {
@@ -25,6 +27,7 @@ const projects = [
     title: "Embroidered Moss Denim + SS25",
     discipline: "AI / 3D / VFX",
     logo: "/projects/house-of-errors/logo.svg",
+    railLogo: "/projects/house-of-errors/logo.svg",
     preview: "/projects/house-of-errors/ss25-poster.jpg",
   },
   {
@@ -33,6 +36,7 @@ const projects = [
     title: "Fans Have More Friends",
     discipline: "AI / 3D / VFX / LED",
     logo: "/projects/heineken/heineken-logo.png",
+    railLogo: "/projects/heineken/heineken-logo.png",
     preview: "/projects/heineken/heineken-blue.jpg",
   },
 ] as const;
@@ -49,8 +53,26 @@ function scrollToProject(event: ReactMouseEvent<HTMLAnchorElement>, id: string, 
 }
 
 export function ProjectLogoRail() {
+  const railRef = useRef<HTMLDivElement>(null);
+
+  const setRailPaused = (paused: boolean) => {
+    const animation = railRef.current
+      ?.querySelector(".projectLogoRailTrack")
+      ?.getAnimations()[0];
+
+    if (!animation) return;
+    if (paused) animation.pause();
+    else animation.play();
+  };
+
   return (
-    <div className="projectLogoRail" aria-label="Jump to a selected project">
+    <div
+      ref={railRef}
+      className="projectLogoRail"
+      aria-label="Jump to a selected project"
+      onPointerEnter={() => setRailPaused(true)}
+      onPointerLeave={() => setRailPaused(false)}
+    >
       <div className="projectLogoRailTrack">
         {[0, 1].map((copy) => (
           <div className="projectLogoRailGroup" aria-hidden={copy === 1} key={copy}>
@@ -62,7 +84,7 @@ export function ProjectLogoRail() {
                 title={`View ${project.brand}`}
                 key={`${copy}-${project.id}`}
               >
-                <img src={project.logo} alt={copy === 0 ? project.brand : ""} />
+                <img src={project.railLogo} alt={copy === 0 ? project.brand : ""} />
               </a>
             ))}
           </div>
@@ -147,3 +169,4 @@ export function WorkIndex() {
     </>
   );
 }
+
