@@ -111,7 +111,7 @@ main:focus { outline:none; }
 .ss25Campaign { padding:70px 24px 24px; color:var(--ink); background:var(--paper-dark); }
 .ss25Intro { display:grid; grid-template-columns:minmax(320px,.8fr) minmax(420px,1.2fr); gap:clamp(44px,9vw,160px); align-items:end; padding-bottom:64px; }
 .ss25Intro .campaignDescription { margin-top:0; }
-.ss25Showcase { display:grid; grid-template-columns:minmax(260px,.58fr) minmax(500px,1.42fr); gap:16px; align-items:start; }
+.ss25Showcase { display:grid; grid-template-columns:minmax(320px,2fr) minmax(480px,3fr); gap:16px; align-items:stretch; }
 .ss25Film { color:var(--paper); background:var(--ink); border-color:var(--ink); }
 .ss25Film video { aspect-ratio:9/16; object-fit:cover; }
 .ss25StillGrid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--ink); border:1.5px solid var(--ink); }
@@ -136,6 +136,27 @@ footer { height:68px; padding:0 24px; display:flex; justify-content:space-betwee
 footer a { text-decoration:none; }
 @keyframes ticker { to { transform:translateX(-16.6666667%); } }
 @keyframes markSpin { to { transform:rotate(360deg); } }
+
+@media (min-width:901px) {
+  .ss25Film {
+    display:grid;
+    grid-template-rows:48px minmax(0,1fr) 48px;
+  }
+
+  .ss25Film video {
+    height:100%;
+    aspect-ratio:auto;
+  }
+
+  .ss25StillGrid {
+    height:100%;
+    grid-template-rows:1fr 1fr;
+  }
+
+  .ss25StillGrid figure {
+    aspect-ratio:auto;
+  }
+}
 
 @media (max-width:900px) {
   :root { --header-h:66px; }
