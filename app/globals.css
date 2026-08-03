@@ -298,7 +298,9 @@ footer a { text-decoration:none; }
   .campaignFilm>figcaption strong { font-size:13px; }
   .reelTop,.featureReel figcaption { min-height:44px; padding:0 10px; }
   .featureReel figcaption strong { font-size:14px; }
-  .contactEmail { align-items:flex-end; }
+  .contactEmail { gap:12px; align-items:flex-end; font-size:clamp(20px,5.8vw,27px); letter-spacing:-.045em; }
+  .contactEmail span:first-child { white-space:nowrap; }
+  .contactEmail span:last-child { flex:none; font-size:20px; }
 }
 @media (prefers-reduced-motion:reduce) {
   html { scroll-behavior:auto; }
