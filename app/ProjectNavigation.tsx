@@ -16,7 +16,7 @@ const projects = [
     id: "house-of-errors",
     brand: "House of Errors",
     title: "Embroidered Moss Denim + SS25",
-    discipline: "AI / 3D / VFX",
+    discipline: "Post / 3D / VFX",
     logo: "/projects/house-of-errors/logo.svg",
     railLogo: "/projects/house-of-errors/logo.svg",
     preview: "/projects/house-of-errors/moss-poster.jpg",
