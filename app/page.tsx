@@ -120,18 +120,18 @@ export default function Home() {
                 <video autoPlay loop muted playsInline preload="metadata" poster="/projects/house-of-errors/moss-poster.jpg" aria-label="House of Errors Embroidered Moss Denim film">
                   <source src="/projects/house-of-errors/moss.mp4" type="video/mp4" />
                 </video>
-                <figcaption><strong>Embroidered Moss Denim</strong><span>AI Post-Production</span></figcaption>
+                <figcaption><strong>Embroidered Moss Denim</strong><span>Post-Production</span></figcaption>
               </figure>
 
               <div className="campaignDetails">
-                <p className="campaignIndex">01 / AI Post-Production</p>
+                <p className="campaignIndex">01 / Post-Production</p>
                 <h3 id="moss-title">Embroidered<br />Moss Denim</h3>
-                <p className="campaignDescription">Shot and directed by Tom Emmerson, the live-action material was extended through designed input and output keyframes. The generated motion was composited, graded and edited into a tactile film where embroidered moss grows through the denim.</p>
+                <p className="campaignDescription">Shot and directed by Tom Emmerson, the live-action material was shaped through compositing, grading and editorial into a tactile film where embroidered moss grows through the denim.</p>
                 <dl className="campaignCredits">
                   <div><dt>Client</dt><dd>House of Errors</dd></div>
                   <div><dt>Agency</dt><dd>Red Buoy</dd></div>
                   <div><dt>Director / Photographer</dt><dd>Tom Emmerson</dd></div>
-                  <div><dt>Workflow</dt><dd>Keyframes / I2V / Composite / Grade / Edit</dd></div>
+                  <div><dt>Workflow</dt><dd>Compositing / Grade / Edit</dd></div>
                 </dl>
               </div>
             </section>
